@@ -10,7 +10,7 @@ Naturally, the best way to get a review is to ask for one. By assigning a review
 
 - **Comment** - General feedback without approval or rejection.
 - **Approve** - Allows merging if [rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets), [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners), or other policies are enforced.
-- **Request Changes** - The proposed changes need continued work, and review should be re-requested.
+- **Request Changes** - The proposed changes need do not meet expectations and need additional work. A review should be re-requested after the changes are made.
 
 The **Files changed** tab is the primary place for collecting feedback. It allows for adding comments directly to lines before submitting a review.
 
@@ -20,7 +20,7 @@ The **Files changed** tab is the primary place for collecting feedback. It allow
 
 1. Reviewing the **Files changed** tab to ensure all proposed code matches the description.
 
-1. For most things, try out the proposed change to verify that it matches the intention.
+1. For most updates, try out the proposed change to verify they match the intention.
 
 1. Use the repository's [contributing guide](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) for any guidance on review requirements, testing, quality verification, etc.
 
