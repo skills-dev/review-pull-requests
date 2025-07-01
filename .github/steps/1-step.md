@@ -14,7 +14,7 @@ A **pull request** is a collaboration area where work in one branch is reviewed 
 - **Files Changed** - A [Diff](https://docs.github.com/en/get-started/quickstart/github-glossary#diff) view that easily shows the proposed changes in a before/after view. It also has options to add comments and reviews in context.
 
 > [!TIP]
-> You can [create a draft pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#:~:text=To%20create%20a%20draft%20pull%20request%2C%20use%20the%20drop%2Ddown%20and%20select%20Create%20Draft%20Pull%20Request%2C%20then%20click%20Draft%20Pull%20Request.%20If%20you%20are%20the%20member%20of%20an%20organization%2C%20you%20may%20need%20to%20request%20access%20to%20draft%20pull%20requests%20from%20an%20organization%20owner.%20See%20About%20pull%20requests.) for unfinished work. This can help avoid accidental merges or premature reviews.
+> You can [create a draft pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) for unfinished work. This can help avoid accidental merges or premature reviews.
 
 ### :keyboard: Activity: Create a pull request
 
