@@ -93,11 +93,17 @@
   function handleClickInput(evt) {
     evt.target.closest("td").innerHTML = HUMAN;
     if (hasWin()) {
-      return endGame();
+      return endGame("human");
+    }
+    if (hasDraw()) {
+      return endGame("draw");
     }
     runRobotTurn();
     if (hasWin()) {
-      return endGame();
+      return endGame("robot");
+    }
+    if (hasDraw()) {
+      return endGame("draw");
     }
   }
 
@@ -122,6 +128,11 @@
     );
   }
 
+  // Determine draw (no more available inputs)
+  function hasDraw() {
+    return !document.querySelector("td input[type=checkbox]");
+  }
+
   // Determine if every cell matches
   function hasAllSame(arr) {
     return arr.every(
@@ -130,7 +141,14 @@
   }
 
   // Display game over, cancel events
-  function endGame() {
+  function endGame(result) {
+    if (result === "draw") {
+      gameOver.textContent = "Game over: Draw";
+    } else if (result === "human") {
+      gameOver.textContent = "Game over: You win";
+    } else if (result === "robot") {
+      gameOver.textContent = "Game over: Robot wins";
+    }
     gameOver.hidden = false;
     for (const input of inputs) {
       input.removeEventListener("click", handleClickInput);
