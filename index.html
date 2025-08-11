@@ -4,7 +4,8 @@
 <style>
   body,
   td,
-  input {
+  input,
+  button {
     font-size: 24px;
     line-height: 1.5;
     text-align: center;
@@ -48,6 +49,7 @@
 </table>
 
 <h2 hidden>Game over</h2>
+<button id="play-again" hidden>Play again</button>
 
 <script>
   // Initialization
@@ -76,6 +78,7 @@
     )
   );
   const gameOver = document.querySelector("h2");
+  const playAgainBtn = document.getElementById("play-again");
   const HUMAN = "🧑‍💻";
   const ROBOT = "🤖";
 
@@ -88,6 +91,9 @@
   for (const input of inputs) {
     input.addEventListener("click", handleClickInput);
   }
+
+  // Play again: reload the page to reset state
+  playAgainBtn.addEventListener("click", () => window.location.reload());
 
   // The user chose a box, check for win, robot turn, check for win
   function handleClickInput(evt) {
@@ -150,6 +156,9 @@
       gameOver.textContent = "Game over: Robot wins";
     }
     gameOver.hidden = false;
+    playAgainBtn.hidden = false;
+    // Move focus to the button for quick replay
+    playAgainBtn.focus();
     for (const input of inputs) {
       input.removeEventListener("click", handleClickInput);
       input.remove();
